@@ -1,0 +1,51 @@
+﻿<Properties StartupConfiguration="{9964D32D-8C87-43E1-8C34-1D15B66AC4A0}|Default">
+  <MonoDevelop.Ide.ItemProperties.DailyUIApp.Android PreferredExecutionTarget="Android.1115fba155480902" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="DailyUIApp/Views/ProfilePage.xaml">
+    <Files>
+      <File FileName="DailyUIApp/Views/ProfilePage.xaml" Line="48" Column="57" />
+      <File FileName="DailyUIApp/Views/ProfilePage.xaml.cs" />
+      <File FileName="DailyUIApp/App.xaml.cs" />
+      <File FileName="DailyUIApp/Models/SocialNetworks.cs" />
+      <File FileName="DailyUIApp/ViewModels/ProfileViewModel.cs" />
+      <File FileName="DailyUIApp.iOS/AppDelegate.cs" />
+      <File FileName="DailyUIApp/Models/Albums.cs" />
+      <File FileName="DailyUIApp.Android/MainActivity.cs" Line="13" Column="62" />
+      <File FileName="DailyUIApp.Android/Resources/Resource.designer.cs" Line="11815" Column="21" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DailyUIApp" expanded="True">
+            <Node name="DailyUIApp" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="ProfilePage.xaml" expanded="True" selected="True" />
+              </Node>
+              <Node name="App.xaml" expanded="True" />
+            </Node>
+            <Node name="DailyUIApp.Android" expanded="True">
+              <Node name="Resources" expanded="True">
+                <Node name="drawable" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="DailyUIApp.iOS" expanded="True">
+              <Node name="Resources" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.DailyUIApp.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.19246DB7-ED17-4769-94AD-22BF5FA8FA24" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

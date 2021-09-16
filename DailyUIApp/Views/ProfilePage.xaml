@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sfavatar="clr-namespace:Syncfusion.XForms.AvatarView;assembly=Syncfusion.Core.XForms"
+             x:Class="DailyUIApp.Views.ProfilePage">
+    <ContentPage.Content>
+        <ScrollView>
+            <!-- Our main structure -->
+            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,*" Padding="{x:OnPlatform iOS='0,70,0,10', Android='0,40,0,20'}">
+                <!-- Step 1. Main information-->
+
+                <!-- Syncfusion Avatar View (Rounded image)-->
+                <sfavatar:SfAvatarView Grid.ColumnSpan="2" Grid.Row="0"  BorderWidth="0"
+                       ContentType="Custom" ImageSource="PProfile" HorizontalOptions="Center" VerticalOptions="Start" WidthRequest="140" HeightRequest="140" CornerRadius="70" Margin="0,0,0,30" />
+                <!-- Name & role description-->
+                <Label Grid.ColumnSpan="2" Grid.Row="1" Text="Catherine Massey " HorizontalOptions="Center" FontAttributes="Bold" FontSize="26" CharacterSpacing="1"/>
+                <Label Grid.ColumnSpan="2" Grid.Row="2" Text=" UI/UX Designer | Daily  🌐" HorizontalOptions="Center" TextColor="Silver" FontSize="20"/>
+
+                 <!--Step 2: Social networks-->
+                    <CollectionView Grid.Row="4" Grid.ColumnSpan="2" Margin="{OnPlatform iOS='80,0', Android='35,0'}" HorizontalScrollBarVisibility="Never" 
+                        ItemsSource="{Binding sn}"
+                        ItemsLayout="HorizontalList"
+                        HeightRequest="80">
+                        <CollectionView.ItemTemplate> 
+                             <DataTemplate>
+                                 <StackLayout Padding="4,10,10,10" Margin="0,20">
+                                        <Button BackgroundColor="{Binding BGColor}" ImageSource="{Binding Picture}" HeightRequest="50" WidthRequest="50" CornerRadius="15" Padding="8"/>
+                                 </StackLayout>
+                             </DataTemplate>
+                       </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                <!-- Followers information-->
+                 <Grid Grid.Row="5" Grid.ColumnSpan="2" RowDefinitions="*,*" ColumnDefinitions="Auto,*,Auto" Margin="30,20,30,0" >
+                     <Label Grid.Row="0" Grid.Column="0" Text="80" FontAttributes="Bold" FontSize="23" HorizontalTextAlignment="Center" />
+                     <Label Grid.Row="1" Grid.Column="0" Text="Posts" FontSize="17" TextColor="#565660" HorizontalTextAlignment="Center"/>
+
+                     <Label Grid.Row="0" Grid.Column="1" Text="110" FontAttributes="Bold" FontSize="23" HorizontalTextAlignment="Center"/>
+                     <Label Grid.Row="1" Grid.Column="1" Text="Followers" FontSize="17" TextColor="#565660" HorizontalTextAlignment="Center"/>
+
+                     <Label Grid.Row="0" Grid.Column="2" Text="152" FontAttributes="Bold" FontSize="23" HorizontalOptions="Center"/>
+                     <Label Grid.Row="1" Grid.Column="2" Text="Following" FontSize="17" TextColor="#565660" HorizontalOptions="Center"/>
+                </Grid>
+
+                <!-- Buttons-->
+                <Button Grid.Row="6" Grid.Column="0" Text="Message" HeightRequest="50" FontAttributes="Bold" BorderColor="#1e40ff" BorderWidth="1" TextColor="#1e40ff" BackgroundColor="Transparent" FontSize="18" Margin="20,20,10,20"/>
+                <Button Grid.Row="6" Grid.Column="1" Text="Follow" HeightRequest="50" FontAttributes="Bold" BackgroundColor="#1e40ff" TextColor="White" FontSize="18" Margin="10,20,20,20"/>
+
+                <!-- Album-->
+                <CollectionView Grid.Row="7" Grid.ColumnSpan="2" HorizontalScrollBarVisibility="Never" Margin="10,0"
+                        ItemsSource="{Binding albums}"
+                        HeightRequest="280"
+                        VerticalScrollBarVisibility="Never">
+                       <CollectionView.ItemsLayout>
+                         <GridItemsLayout Orientation="Vertical" Span="3" />
+                       </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate> 
+                             <DataTemplate>
+                                <StackLayout Padding="0,0,5,10">
+                                    <Frame Padding="0" HeightRequest="135" VerticalOptions="FillAndExpand" HorizontalOptions="Start" HasShadow="False" IsClippedToBounds="True" CornerRadius="13" >
+                                           <Image Source="{Binding Picture}" Aspect="AspectFill" />
+                                    </Frame>
+                                </StackLayout>
+                             </DataTemplate>
+                       </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+  
